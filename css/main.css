@@ -477,7 +477,6 @@ nav {
 }
 
 .nav-li.active {
-  pointer-events: none;
   background-color: rgba(211, 177, 175, 0.1);
   padding: 0 10px;
 }
