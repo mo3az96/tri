@@ -1684,7 +1684,6 @@ html[dir='ltr'] .mo-log-anchor .mo-text:after {
   color: #fff;
   width: 17px;
   height: 17px;
-  right: 2px;
   top: -6px;
   text-align: center;
   line-height: 17px;
@@ -1692,6 +1691,14 @@ html[dir='ltr'] .mo-log-anchor .mo-text:after {
   transition: all 0.3s ease-in-out;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+}
+
+html[dir='ltr'] .count {
+  left: 5px;
+}
+
+html[dir='rtl'] .count {
+  right: 2px;
 }
 
 .mo-search-icon {

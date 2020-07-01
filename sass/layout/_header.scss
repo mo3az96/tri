@@ -381,12 +381,19 @@
     color: #fff;
     width: 17px;
     height: 17px;
-    right: 2px;
     top: -6px;
     text-align: center;
     line-height: 17px;
     transition: all 0.3s ease-in-out;
     backface-visibility: hidden;
+
+    html[dir='ltr'] & {
+        left: 5px;
+    }
+
+    html[dir='rtl'] & {
+        right: 2px;
+    }
 }
 
 .mo-search-icon {
