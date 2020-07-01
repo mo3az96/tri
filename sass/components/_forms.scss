@@ -1,0 +1,182 @@
+.search-form {
+    position: relative;
+    margin: auto;
+
+    .search-close {
+        display: none;
+        top: 50px;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+
+        path {
+            fill: rgba(#fff, 0.75)
+        }
+    }
+
+    @include md {
+        flex: unset;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($text, 0.7);
+        margin: 0;
+        z-index: 9999;
+        display: none;
+
+        .search-close {
+            display: block;
+        }
+    }
+}
+
+.search-cont {
+    position: relative;
+    overflow: hidden;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    width: 700px;
+
+    @include lg {
+        width: 852px;
+    }
+
+    @include md {
+        position: relative;
+        width: calc(100% - 30px);
+        margin: 120px auto;
+        z-index: 99;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(50px);
+        @include transition(all 0.4s ease-in-out);
+
+        &.open {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+.search-input {
+    height: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 0 26px;
+    width: 100%;
+    font-size: 14px;
+    color: $text;
+    background-color: #F8F8F8;
+    @include transition(all 0.3s ease-in-out);
+
+    &::placeholder {
+        color: $place;
+    }
+
+    &:focus {
+        border-color: $main;
+    }
+
+    html[dir='ltr'] & {
+        text-align: left;
+    }
+
+    html[dir='rtl'] & {
+        text-align: right;
+    }
+}
+
+.search-button {
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: #707070;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        fill: $main;
+    }
+
+    html[dir='ltr'] & {
+        right: 20px
+    }
+
+    html[dir='rtl'] & {
+        left: 20px;
+    }
+}
+
+.newsletter-form {
+    width: 505px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+
+    @include sm {
+        width: 100%;
+    }
+}
+
+.newsletter-input {
+    flex-grow: 1;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #D6D6D6;
+    padding: 0 18px;
+    transition: all 0.3s ease-in-out;
+
+    html[dir='ltr'] & {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        border-right: none;
+        text-align: left;
+    }
+
+    html[dir='rtl'] & {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-left: none;
+        text-align: right;
+    }
+
+    &:focus {
+        border-color: $main;
+    }
+
+    font-size: 14px;
+    color: $text;
+
+    &::placeholder {
+        color: $place;
+    }
+}
+
+.newsletter-btn {
+    width: 120px;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 500;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $main;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: rgba($main, 0.85);
+    }
+
+    @include sm {
+        width: 105px;
+    }
+}
