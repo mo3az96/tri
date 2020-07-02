@@ -206,4 +206,7 @@ $(document).ready(function () {
         $("nav").removeClass("nav-in");
         $("body").removeClass("overflow");
     });
+    $('.curr .top-anchor').click(function () {
+        $(".top-dropdown").slideToggle(400);
+    });
 });
