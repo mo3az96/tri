@@ -2366,7 +2366,7 @@ hr {
     background-color: #fff;
     width: 297px;
     z-index: 999;
-    padding: 60px 0 60px;
+    padding: 60px 0 100px;
     right: -400px;
     overflow-y: auto;
     overflow-x: hidden;
